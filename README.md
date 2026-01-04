@@ -362,6 +362,7 @@
             justify-content: space-between;
             margin-bottom: 8px;
             color: #f0f6fc;
+            font-weight: 500;
         }
         
         .skill-bar {
@@ -376,6 +377,66 @@
             height: 100%;
             border-radius: 4px;
             transition: width 1s ease;
+        }
+        
+        /* Languages Section */
+        .languages-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .language-card {
+            background: rgba(22, 27, 34, 0.6);
+            border: 1px solid rgba(48, 54, 61, 0.8);
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .language-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #58a6ff, #a371f7);
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+        
+        .language-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .language-card:hover {
+            background: rgba(22, 27, 34, 0.8);
+            border-color: #58a6ff;
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(88, 166, 255, 0.2);
+        }
+        
+        .language-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+        
+        .language-card h3 {
+            color: #f0f6fc;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        
+        .language-level {
+            color: #58a6ff;
+            font-weight: 600;
+            font-size: 1.1em;
         }
         
         /* Contact Section */
@@ -610,7 +671,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Test Automation</span>
-                            <span>90%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 90%"></div>
@@ -619,7 +679,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Manual Testing</span>
-                            <span>95%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 95%"></div>
@@ -628,7 +687,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>TestComplete</span>
-                            <span>85%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 85%"></div>
@@ -641,7 +699,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Java</span>
-                            <span>80%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 80%"></div>
@@ -650,7 +707,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>JavaScript/TypeScript</span>
-                            <span>85%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 85%"></div>
@@ -659,7 +715,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>React/Next.js</span>
-                            <span>80%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 80%"></div>
@@ -672,7 +727,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Git & GitHub</span>
-                            <span>90%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 90%"></div>
@@ -681,7 +735,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>SQL & PostgreSQL</span>
-                            <span>85%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 85%"></div>
@@ -690,7 +743,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Docker & CI/CD</span>
-                            <span>75%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 75%"></div>
@@ -701,8 +753,30 @@
         </div>
     </section>
     
+    <!-- Languages Section -->
+    <section class="section" style="background: rgba(22, 27, 34, 0.3);">
+        <div class="container">
+            <h2 class="section-title">🌍 Idiomas</h2>
+            <p class="section-subtitle">Comunicação global para oportunidades internacionais</p>
+            
+            <div class="languages-container">
+                <div class="language-card">
+                    <div class="language-icon">🇧🇷</div>
+                    <h3>Português</h3>
+                    <p class="language-level">Nativo</p>
+                </div>
+                
+                <div class="language-card">
+                    <div class="language-icon">🇺🇸</div>
+                    <h3>Inglês</h3>
+                    <p class="language-level">Fluente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Contact -->
-    <section id="contato" class="section" style="background: rgba(22, 27, 34, 0.3);">
+    <section id="contato" class="section">
         <div class="container">
             <h2 class="section-title">📫 Vamos Conversar?</h2>
             <p class="section-subtitle">Estou sempre aberto a novas oportunidades e conexões</p>
