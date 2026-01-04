@@ -1,58 +1,177 @@
-# 👋 Olá! Sou Matheus
-
-<div align="center">
-  
-**QA Software Tester → Full-Stack Developer**
-
-🔍 Automação de Testes | 💻 Full-Stack | 🤖 Futuro ML Engineer
-
-📍 Concórdia, Santa Catarina, Brasil
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](SEU_LINKEDIN)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:SEU_EMAIL)
-
-</div>
-
----
-
-## 🚀 Sobre
-
-Profissional de QA em transição para desenvolvimento full-stack. Experiência sólida em automação de testes e databases, construindo skills em web, mobile e backend.
-
-- 🎓 Pós em Eng. de Software - Java (INFNET - Fev/2026)
-- 💪 Commits diários no GitHub
-- 📚 Aprendizado contínuo: Udemy e DIO
-
----
-
-## 🛠️ Tech Stack
-
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=SEU_USERNAME&show_icons=true&theme=radical&count_private=true)
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=SEU_USERNAME&theme=radical)
-
-</div>
-
-## 🌱 Focando Agora
-
-```javascript
-{
-  learning: ['Go', 'Advanced React', 'Flutter', 'ML Basics'],
-  goals: ['Software Engineering Postgrad', 'ML Specialization']
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus - QA → Full-Stack Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .section {
+            margin: 40px 0;
+        }
+        
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .tech-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
+        .project {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .project h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .project-tech {
+            color: #ffd700;
+            margin: 10px 0;
+        }
+        
+        .links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px 24px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>👋 Matheus</h1>
+        <p class="subtitle">QA Software Tester → Full-Stack Developer</p>
+        
+        <div class="badges">
+            <span class="badge">🔍 Test Automation</span>
+            <span class="badge">💻 Full-Stack</span>
+            <span class="badge">🤖 Future ML Engineer</span>
+            <span class="badge">📍 Concórdia, SC, BR</span>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 Sobre</h2>
+            <p>Profissional de QA em transição para desenvolvimento full-stack. Experiência em automação de testes com TestComplete, otimização de databases PostgreSQL e desenvolvimento web moderno.</p>
+            <br>
+            <p>🎓 Pós-Graduação em Engenharia de Software (Java) - INFNET | Início: Fev/2026</p>
+        </div>
+        
+        <div class="section">
+            <h2>🛠️ Tech Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">Java</div>
+                <div class="tech-item">JavaScript</div>
+                <div class="tech-item">TypeScript</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">React</div>
+                <div class="tech-item">Next.js</div>
+                <div class="tech-item">Flutter</div>
+                <div class="tech-item">PostgreSQL</div>
+            </div>
+        </div>
+        
+        
+        <div class="section">
+            <h2>📫 Contato</h2>
+            <div class="links">
+                <a href="https://linkedin.com/in/matheus-gabriel-leidow/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/math3ux" target="_blank">GitHub</a>
+                <a href="mailto:matheusleidow@gmail.com">Email</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
