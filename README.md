@@ -521,7 +521,7 @@
                 <span class="badge">🔍 Test Automation</span>
                 <span class="badge">💻 Full-Stack Developer</span>
                 <span class="badge">☕ Java Engineer</span>
-                <span class="badge">📍 Concórdia, SC</span>
+                <span class="badge">📍 SC, BR</span>
             </div>
             
             <div class="cta-buttons">
