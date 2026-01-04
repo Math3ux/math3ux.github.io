@@ -701,7 +701,7 @@
                             <span>Java</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
+                            <div class="skill-progress" style="width: 100%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -709,7 +709,7 @@
                             <span>JavaScript/TypeScript</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
+                            <div class="skill-progress" style="width: 100%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -717,7 +717,7 @@
                             <span>React/Next.js</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
+                            <div class="skill-progress" style="width: 100%"></div>
                         </div>
                     </div>
                 </div>
@@ -729,7 +729,7 @@
                             <span>Git & GitHub</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
+                            <div class="skill-progress" style="width: 100%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -737,7 +737,7 @@
                             <span>SQL & PostgreSQL</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
+                            <div class="skill-progress" style="width: 100%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -745,7 +745,7 @@
                             <span>Docker & CI/CD</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
+                            <div class="skill-progress" style="width: 100%"></div>
                         </div>
                     </div>
                 </div>
@@ -769,7 +769,7 @@
                 <div class="language-card">
                     <div class="language-icon">🇺🇸</div>
                     <h3>Inglês</h3>
-                    <p class="language-level">Fluente</p>
+                    <p class="language-level">Intermediário</p>
                 </div>
             </div>
         </div>
