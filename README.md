@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Leidow - QA → Full-Stack Developer</title>
+    <title>Matheus Leidow - QA Engineer & Developer</title>
     <style>
         * {
             margin: 0;
@@ -11,49 +12,59 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: #0a0e27;
-            color: #e0e0e0;
-            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
             overflow-x: hidden;
         }
         
-        /* Animated background */
-        .bg-animation {
+        /* Animated Background */
+        .bg-container {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
         }
         
-        .bg-animation::before {
+        .bg-container::before {
             content: '';
             position: absolute;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 1px, transparent 1px);
+            background-image: 
+                linear-gradient(rgba(88, 166, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(88, 166, 255, 0.03) 1px, transparent 1px);
             background-size: 50px 50px;
-            animation: moveBackground 20s linear infinite;
+            animation: moveGrid 20s linear infinite;
         }
         
-        @keyframes moveBackground {
+        @keyframes moveGrid {
             0% { transform: translate(0, 0); }
             100% { transform: translate(50px, 50px); }
         }
         
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 0 20px;
         }
         
-        /* Header Section */
-        .header {
+        /* Header/Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 100px 20px;
+            padding: 60px 20px;
+        }
+        
+        .hero-content {
             animation: fadeInUp 1s ease;
         }
         
@@ -68,97 +79,212 @@
             }
         }
         
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid #667eea;
+        .hero h1 {
+            font-size: 4em;
+            font-weight: 700;
             margin-bottom: 20px;
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        h1 {
-            font-size: 3.5em;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #58a6ff 0%, #a371f7 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
-        .typing-effect {
-            font-size: 1.5em;
-            color: #a0a0a0;
-            margin: 20px 0;
-            min-height: 40px;
+        .hero .subtitle {
+            font-size: 1.8em;
+            color: #8b949e;
+            margin-bottom: 15px;
         }
         
-        .badges {
+        .typing-text {
+            font-size: 1.3em;
+            color: #58a6ff;
+            min-height: 40px;
+            margin: 20px 0;
+        }
+        
+        .hero-badges {
             display: flex;
             gap: 15px;
-            flex-wrap: wrap;
             justify-content: center;
+            flex-wrap: wrap;
             margin: 30px 0;
         }
         
         .badge {
-            background: rgba(102, 126, 234, 0.2);
+            background: rgba(88, 166, 255, 0.1);
+            border: 1px solid rgba(88, 166, 255, 0.3);
             padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 0.9em;
-            font-weight: 500;
-            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 20px;
+            font-size: 0.95em;
             transition: all 0.3s;
         }
         
         .badge:hover {
-            background: rgba(102, 126, 234, 0.3);
+            background: rgba(88, 166, 255, 0.2);
             transform: translateY(-3px);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .btn {
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05em;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: #58a6ff;
+            color: #0d1117;
+        }
+        
+        .btn-primary:hover {
+            background: #79c0ff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(88, 166, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #58a6ff;
+            border: 2px solid #58a6ff;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(88, 166, 255, 0.1);
+            transform: translateY(-2px);
         }
         
         /* Section Styles */
         .section {
-            margin: 80px 0;
+            padding: 100px 0;
             animation: fadeInUp 1s ease;
         }
         
-        h2 {
-            font-size: 2.5em;
-            margin-bottom: 40px;
+        .section-title {
+            font-size: 2.8em;
             text-align: center;
+            margin-bottom: 20px;
+            color: #f0f6fc;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #8b949e;
+            font-size: 1.2em;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #58a6ff, #a371f7);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            margin: 50px 0;
             position: relative;
         }
         
-        h2::after {
+        .timeline-item::before {
             content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            margin: 15px auto;
-            border-radius: 2px;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: #58a6ff;
+            border: 4px solid #0d1117;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
         }
         
-        /* Tech Stack Grid */
+        .timeline-content {
+            background: rgba(22, 27, 34, 0.6);
+            border: 1px solid rgba(48, 54, 61, 0.8);
+            padding: 30px;
+            border-radius: 12px;
+            width: 45%;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        
+        .timeline-content:hover {
+            background: rgba(22, 27, 34, 0.8);
+            border-color: #58a6ff;
+            transform: scale(1.03);
+            box-shadow: 0 8px 30px rgba(88, 166, 255, 0.2);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+        
+        .timeline-date {
+            color: #58a6ff;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content h3 {
+            font-size: 1.6em;
+            color: #f0f6fc;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content h4 {
+            color: #a371f7;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .timeline-content p {
+            color: #8b949e;
+            line-height: 1.7;
+        }
+        
+        /* Tech Stack */
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 20px;
-            margin: 40px 0;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
         .tech-item {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 25px;
-            border-radius: 15px;
+            background: rgba(22, 27, 34, 0.6);
+            border: 1px solid rgba(48, 54, 61, 0.8);
+            padding: 30px 20px;
+            border-radius: 12px;
             text-align: center;
             transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
         }
@@ -170,7 +296,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(88, 166, 255, 0.1), transparent);
             transition: left 0.5s;
         }
         
@@ -179,356 +305,455 @@
         }
         
         .tech-item:hover {
-            transform: translateY(-10px);
-            background: rgba(102, 126, 234, 0.1);
-            border-color: #667eea;
+            background: rgba(22, 27, 34, 0.8);
+            border-color: #58a6ff;
+            transform: translateY(-8px);
         }
         
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
+        .tech-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
         
-        .project-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s;
-            position: relative;
-            overflow: hidden;
+        .tech-name {
+            font-weight: 600;
+            color: #f0f6fc;
         }
         
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transform: scaleX(0);
-            transition: transform 0.4s;
-        }
-        
-        .project-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.08);
-            border-color: #667eea;
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
-        }
-        
-        .project-card h3 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            color: #667eea;
-        }
-        
-        .project-card p {
-            color: #b0b0b0;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        
-        .project-tech {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin: 20px 0;
-        }
-        
-        .tech-tag {
-            background: rgba(102, 126, 234, 0.2);
-            padding: 5px 12px;
-            border-radius: 15px;
+        .tech-category {
             font-size: 0.85em;
-            color: #a0c4ff;
+            color: #8b949e;
+            margin-top: 5px;
         }
         
-        .project-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
-        .project-links a {
-            padding: 8px 16px;
-            font-size: 0.9em;
-        }
-        
-        /* Timeline */
-        .timeline {
-            position: relative;
-            padding: 20px 0;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, #667eea, #764ba2);
-        }
-        
-        .timeline-item {
-            margin: 40px 0;
-            position: relative;
-        }
-        
-        .timeline-content {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            width: 45%;
+        .skill-category {
+            background: rgba(22, 27, 34, 0.6);
+            border: 1px solid rgba(48, 54, 61, 0.8);
+            padding: 30px;
+            border-radius: 12px;
             transition: all 0.3s;
         }
         
-        .timeline-content:hover {
-            background: rgba(255, 255, 255, 0.08);
-            transform: scale(1.05);
+        .skill-category:hover {
+            border-color: #58a6ff;
+            transform: translateY(-5px);
         }
         
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: auto;
+        .skill-category h3 {
+            color: #58a6ff;
+            margin-bottom: 20px;
+            font-size: 1.4em;
         }
         
-        .timeline-date {
-            color: #667eea;
-            font-weight: bold;
-            margin-bottom: 10px;
+        .skill-item {
+            margin: 15px 0;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            color: #f0f6fc;
+        }
+        
+        .skill-bar {
+            background: rgba(48, 54, 61, 0.5);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            background: linear-gradient(90deg, #58a6ff, #a371f7);
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1s ease;
         }
         
         /* Contact Section */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
         }
         
         .contact-card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 30px;
-            border-radius: 15px;
+            background: rgba(22, 27, 34, 0.6);
+            border: 1px solid rgba(48, 54, 61, 0.8);
+            padding: 40px 30px;
+            border-radius: 12px;
             text-align: center;
             transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .contact-card:hover {
-            background: rgba(102, 126, 234, 0.1);
-            transform: translateY(-5px);
-            border-color: #667eea;
+            background: rgba(22, 27, 34, 0.8);
+            border-color: #58a6ff;
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(88, 166, 255, 0.2);
         }
         
         .contact-icon {
-            font-size: 2.5em;
+            font-size: 3em;
             margin-bottom: 15px;
         }
         
-        a {
-            color: #667eea;
+        .contact-card h3 {
+            color: #f0f6fc;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .contact-card a {
+            color: #58a6ff;
             text-decoration: none;
-            transition: all 0.3s;
+            font-weight: 500;
         }
         
-        a:hover {
-            color: #764ba2;
+        .contact-card a:hover {
+            color: #79c0ff;
         }
         
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
-            padding: 12px 30px;
-            border-radius: 25px;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        
-        .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-            color: #fff;
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #8b949e;
+            border-top: 1px solid rgba(48, 54, 61, 0.5);
         }
         
         /* Responsive */
         @media (max-width: 768px) {
-            h1 { font-size: 2.5em; }
-            h2 { font-size: 2em; }
-            .header { padding: 60px 20px; }
+            .hero h1 { font-size: 2.5em; }
+            .hero .subtitle { font-size: 1.3em; }
+            .typing-text { font-size: 1.1em; }
+            .cta-buttons { flex-direction: column; }
             .timeline::before { left: 20px; }
             .timeline-content { width: calc(100% - 60px); margin-left: 60px !important; }
-            .projects-grid { grid-template-columns: 1fr; }
+            .timeline-item::before { left: 20px; }
+            .section { padding: 60px 0; }
+            .section-title { font-size: 2em; }
         }
     </style>
 </head>
 <body>
-    <div class="bg-animation"></div>
+    <div class="bg-container"></div>
     
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>👋 Matheus Leidow</h1>
-            <div class="typing-effect">QA Software Tester → Full-Stack Developer</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Matheus Leidow</h1>
+            <p class="subtitle">QA Engineer & Software Developer</p>
+            <div class="typing-text">Transformando Qualidade em Código</div>
             
-            <div class="badges">
+            <div class="hero-badges">
                 <span class="badge">🔍 Test Automation</span>
-                <span class="badge">💻 Full-Stack</span>
-                <span class="badge">🤖 Future ML Engineer</span>
-                <span class="badge">📍 Concórdia, SC, BR</span>
+                <span class="badge">💻 Full-Stack Developer</span>
+                <span class="badge">☕ Java Engineer</span>
+                <span class="badge">📍 Concórdia, SC</span>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="#contato" class="btn btn-primary">Entre em Contato</a>
+                <a href="#experiencia" class="btn btn-secondary">Ver Trajetória</a>
             </div>
         </div>
-        
-        <!-- About Section -->
-        <div class="section">
-            <h2>🚀 Sobre Mim</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1em;">
-                Profissional de QA em transição para desenvolvimento full-stack. Experiência em automação de testes com TestComplete, 
-                otimização de databases PostgreSQL e desenvolvimento web moderno. Apaixonado por tecnologia e sempre em busca de novos desafios.
-            </p>
-            <p style="text-align: center; margin-top: 20px; color: #667eea;">
-                🎓 Pós-Graduação em Engenharia de Software (Java) - INFNET | Início: Fev/2026
-            </p>
-        </div>
-        
-        <!-- Tech Stack -->
-        <div class="section">
-            <h2>🛠️ Tech Stack</h2>
-            <div class="tech-grid">
-                <div class="tech-item">☕ Java</div>
-                <div class="tech-item">📜 JavaScript</div>
-                <div class="tech-item">🔷 TypeScript</div>
-                <div class="tech-item">🐍 Python</div>
-                <div class="tech-item">⚛️ React</div>
-                <div class="tech-item">▲ Next.js</div>
-                <div class="tech-item">🦋 Flutter</div>
-                <div class="tech-item">🐘 PostgreSQL</div>
-                <div class="tech-item">🔧 TestComplete</div>
-                <div class="tech-item">🐙 Git</div>
-                <div class="tech-item">🐳 Docker</div>
-                <div class="tech-item">☁️ Cloud</div>
-            </div>
-        </div>
-        
-        <!-- Projects Section -->
-        <div class="section">
-            <h2>💼 Projetos em Destaque</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>🤖 Automação de Testes</h3>
-                    <p>Framework de automação de testes desenvolvido com TestComplete para garantir qualidade e eficiência no ciclo de desenvolvimento.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">TestComplete</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">CI/CD</span>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <h3>🌐 Web Application</h3>
-                    <p>Aplicação web moderna desenvolvida com React e Next.js, focada em performance e experiência do usuário.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">TypeScript</span>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <h3>📱 Mobile App</h3>
-                    <p>Aplicativo mobile cross-platform desenvolvido com Flutter, oferecendo experiência nativa em iOS e Android.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Dart</span>
-                        <span class="tech-tag">Firebase</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Experience Timeline -->
-        <div class="section">
-            <h2>📚 Experiência & Educação</h2>
+    </section>
+    
+    <!-- Experience Timeline -->
+    <section id="experiencia" class="section">
+        <div class="container">
+            <h2 class="section-title">📚 Minha Jornada</h2>
+            <p class="section-subtitle">Da qualidade manual ao código: uma evolução contínua</p>
+            
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">2026 - Presente</div>
-                        <h3>Pós-Graduação em Engenharia de Software</h3>
-                        <p>INFNET - Especialização em Java e arquitetura de software</p>
+                        <div class="timeline-date">Jan/2026 - Dez/2026</div>
+                        <h3>Pós-Graduação em Engenharia de Software com Java</h3>
+                        <h4>Instituto Infnet</h4>
+                        <p>Especialização focada em Java e arquitetura de software moderna. Aprofundamento em padrões de projeto, microsserviços, cloud computing e boas práticas de desenvolvimento.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">2024 - Presente</div>
-                        <h3>QA Software Tester</h3>
-                        <p>Automação de testes, otimização de processos e garantia de qualidade</p>
+                        <div class="timeline-date">Jan/2024 - Atualmente</div>
+                        <h3>QA Automation Engineer</h3>
+                        <h4>Automação com TestComplete</h4>
+                        <p>Desenvolvimento e manutenção de testes automatizados utilizando TestComplete com Pascal e DelphiScript. Implementação de frameworks de teste e otimização de processos.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - Jun/2025</div>
+                        <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        <h4>UNOPAR</h4>
+                        <p>Formação completa em desenvolvimento de software, cobrindo fundamentos de programação, banco de dados, engenharia de software e metodologias ágeis.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date">2023 - 2024</div>
-                        <h3>Transição para Full-Stack</h3>
-                        <p>Desenvolvimento de habilidades em React, Next.js e tecnologias modernas</p>
+                        <h3>QA Manual Tester</h3>
+                        <h4>Início da Carreira em QA</h4>
+                        <p>Primeiro contato profissional com testes de software. Experiência em testes funcionais, exploratórios, regressão e documentação de bugs. Desenvolvimento de casos de teste e participação ativa em sprints ágeis.</p>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Contact Section -->
-        <div class="section">
-            <h2>📫 Vamos Conectar?</h2>
+    </section>
+    
+    <!-- Tech Stack -->
+    <section class="section" style="background: rgba(22, 27, 34, 0.3);">
+        <div class="container">
+            <h2 class="section-title">🛠️ Tecnologias & Ferramentas</h2>
+            <p class="section-subtitle">Stack principal que utilizo no dia a dia</p>
+            
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon">☕</div>
+                    <div class="tech-name">Java</div>
+                    <div class="tech-category">Backend</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">🔧</div>
+                    <div class="tech-name">TestComplete</div>
+                    <div class="tech-category">Automation</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">📜</div>
+                    <div class="tech-name">Pascal Script</div>
+                    <div class="tech-category">Scripting</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">🔷</div>
+                    <div class="tech-name">DelphiScript</div>
+                    <div class="tech-category">Automation</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">⚛️</div>
+                    <div class="tech-name">React</div>
+                    <div class="tech-category">Frontend</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">📘</div>
+                    <div class="tech-name">TypeScript</div>
+                    <div class="tech-category">Language</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">🐘</div>
+                    <div class="tech-name">PostgreSQL</div>
+                    <div class="tech-category">Database</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">🐙</div>
+                    <div class="tech-name">Git</div>
+                    <div class="tech-category">Version Control</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">🐳</div>
+                    <div class="tech-name">Docker</div>
+                    <div class="tech-category">DevOps</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">🚀</div>
+                    <div class="tech-name">CI/CD</div>
+                    <div class="tech-category">Automation</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">▲</div>
+                    <div class="tech-name">Next.js</div>
+                    <div class="tech-category">Framework</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">🎯</div>
+                    <div class="tech-name">Agile</div>
+                    <div class="tech-category">Methodology</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">💪 Competências</h2>
+            <p class="section-subtitle">Principais áreas de atuação e expertise</p>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>🔍 Quality Assurance</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Test Automation</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Manual Testing</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>TestComplete</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>💻 Desenvolvimento</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Java</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript/TypeScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>React/Next.js</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🔧 Ferramentas & DevOps</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Git & GitHub</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>SQL & PostgreSQL</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Docker & CI/CD</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact -->
+    <section id="contato" class="section" style="background: rgba(22, 27, 34, 0.3);">
+        <div class="container">
+            <h2 class="section-title">📫 Vamos Conversar?</h2>
+            <p class="section-subtitle">Estou sempre aberto a novas oportunidades e conexões</p>
+            
             <div class="contact-grid">
                 <div class="contact-card">
                     <div class="contact-icon">💼</div>
                     <h3>LinkedIn</h3>
-                    <a href="https://linkedin.com/in/matheus-gabriel-leidow/" target="_blank" class="btn">Conectar</a>
+                    <p><a href="https://linkedin.com/in/matheus-gabriel-leidow/" target="_blank">Conectar no LinkedIn</a></p>
                 </div>
                 
                 <div class="contact-card">
                     <div class="contact-icon">💻</div>
                     <h3>GitHub</h3>
-                    <a href="https://github.com/math3ux" target="_blank" class="btn">Ver Projetos</a>
+                    <p><a href="https://github.com/math3ux" target="_blank">Ver meus projetos</a></p>
                 </div>
                 
                 <div class="contact-card">
                     <div class="contact-icon">📧</div>
                     <h3>Email</h3>
-                    <a href="mailto:matheusleidow@gmail.com" class="btn">Enviar Email</a>
+                    <p><a href="mailto:matheusleidow@gmail.com">matheusleidow@gmail.com</a></p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Matheus Leidow. Desenvolvido com ☕ e 💙</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">QA Engineer | Full-Stack Developer | Em constante evolução</p>
+        </div>
+    </footer>
     
     <script>
         // Typing effect
-        const texts = [
-            'QA Software Tester → Full-Stack Developer',
-            'Automation Specialist',
-            'Problem Solver',
-            'Continuous Learner'
+        const typingTexts = [
+            'Transformando Qualidade em Código',
+            'QA Automation Specialist',
+            'Full-Stack Developer',
+            'Java Engineer',
+            'Problem Solver'
         ];
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
-        const typingElement = document.querySelector('.typing-effect');
+        const typingElement = document.querySelector('.typing-text');
         
         function type() {
-            const currentText = texts[textIndex];
+            const currentText = typingTexts[textIndex];
             
             if (isDeleting) {
                 typingElement.textContent = currentText.substring(0, charIndex - 1);
@@ -542,25 +767,68 @@
                 setTimeout(() => isDeleting = true, 2000);
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
+                textIndex = (textIndex + 1) % typingTexts.length;
             }
             
             setTimeout(type, isDeleting ? 50 : 100);
         }
         
-        type();
+        // Start typing effect
+        setTimeout(type, 1000);
         
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 1s ease forwards';
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
         
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections
         document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(section);
+        });
+        
+        // Animate skill bars on scroll
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.skill-progress');
+                    progressBars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 100);
+                    });
+                    skillObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.skills-container').forEach(container => {
+            skillObserver.observe(container);
         });
     </script>
 </body>
