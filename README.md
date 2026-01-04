@@ -74,7 +74,7 @@
         
         .tech-item {
             background: rgba(255, 255, 255, 0.15);
-            padding: 17px;
+            padding: 13px;
             border-radius: 10px;
             text-align: center;
             transition: transform 0.3s;
