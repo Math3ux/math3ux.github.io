@@ -673,7 +673,7 @@
                             <span>Test Automation</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
+                            <div class="skill-progress" style="width: 100%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -681,7 +681,7 @@
                             <span>Manual Testing</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
+                            <div class="skill-progress" style="width: 100%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -689,7 +689,7 @@
                             <span>TestComplete</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
+                            <div class="skill-progress" style="width: 100%"></div>
                         </div>
                     </div>
                 </div>
