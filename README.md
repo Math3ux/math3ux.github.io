@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -75,7 +74,7 @@
         
         .tech-item {
             background: rgba(255, 255, 255, 0.15);
-            padding: 15px;
+            padding: 17px;
             border-radius: 10px;
             text-align: center;
             transition: transform 0.3s;
