@@ -598,7 +598,7 @@
                 
                 <div class="tech-item">
                     <div class="tech-icon">📜</div>
-                    <div class="tech-name">Pascal Script</div>
+                    <div class="tech-name">Pascal</div>
                     <div class="tech-category">Scripting</div>
                 </div>
                 
